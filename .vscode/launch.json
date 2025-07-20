@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ejecutar MPI + OpenMP (mpiexec)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\checkpoint_rollback MPI.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "console": "externalTerminal",
+      "preLaunchTask": "Compilar MPI + OpenMP"
+    },
+    {
+      "name": "Ejecutar con 4 procesos (mpiexec)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "C:\\Program Files\\Microsoft MPI\\Bin\\mpiexec.exe",
+      "args": [
+        "-n", "4",
+        "${workspaceFolder}\\checkpoint_rollback MPI.exe"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "console": "externalTerminal",
+      "preLaunchTask": "Compilar MPI + OpenMP"
+    }
+  ]
+}
+
+
+
+

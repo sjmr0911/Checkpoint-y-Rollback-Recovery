@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar MPI + OpenMP",
+      "type": "shell",
+      "command": "cl",
+      "args": [
+        "/openmp",
+        "/I\"C:\\PROGRA~2\\Microsoft SDKs\\MPI\\Include\"",
+        "multiplicacion_matrices.c",
+        "/link",
+        "/LIBPATH:\"C:\\PROGRA~2\\Microsoft SDKs\\MPI\\Lib\\x64\"",
+        "msmpi.lib"
+      ],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/d", "/c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"]
+    }
+  ]
+}
+
+
+
+
